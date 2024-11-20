@@ -13,15 +13,6 @@ class TestNumeros(unittest.TestCase):
         self.incluir_numeros=True 
         self.incluir_especiais=0
 
-    def tearDown(self):
-        return super().tearDown()
-
     def test_senha_com_numeros(self):
         senha = gerar_senha(self.tamanho, self.incluir_maiusculas, self.incluir_numeros, self.incluir_especiais)
         self.assertTrue(any(char.isdigit() for char in senha))
-   
-    def tearDown(self):
-        return super().tearDown()
-
-if __name__ == "__main__":
-    unittest.main()

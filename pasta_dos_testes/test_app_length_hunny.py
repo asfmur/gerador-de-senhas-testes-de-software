@@ -10,13 +10,9 @@ class TestLengthHunny(unittest.TestCase):
     def setUp(self):
         self.tamanho = 100
 
-    def tearDown(self):
-        return super().tearDown()
-
     def test_erro_tamanho_hunny(self):
         with self.assertRaises(ValueError):
             gerar_senha(self.tamanho)
 
 
-if __name__ == "__main__":
-    unittest.main()
+

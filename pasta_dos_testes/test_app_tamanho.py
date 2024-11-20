@@ -34,6 +34,3 @@ class TestTamanho(unittest.TestCase):
     def test_terceiro_senha_tamanho(self):
         senha = gerar_senha(self.tamanho, self.incluir_maiusculas, self.incluir_numeros, self.incluir_especiais)
         self.assertEqual(len(senha), 30)
-   
-if __name__ == "__main__":
-    unittest.main()

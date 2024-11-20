@@ -13,13 +13,7 @@ class TestMaiusculas(unittest.TestCase):
         self.incluir_numeros=0 
         self.incluir_especiais=0
 
-    def tearDown(self):
-        return super().tearDown()
 
     def test_senha_com_maiusculas(self):
         senha = gerar_senha(self.tamanho, self.incluir_maiusculas, self.incluir_numeros, self.incluir_especiais)
         self.assertTrue(any(char.isupper() for char in senha))
-  
-
-if __name__ == "__main__":
-    unittest.main()

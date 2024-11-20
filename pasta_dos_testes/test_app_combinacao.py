@@ -12,9 +12,6 @@ class TestCombinacao(unittest.TestCase):
         self.incluir_maiusculas=True 
         self.incluir_numeros=True 
         self.incluir_especiais=True
-        
-    def tearDown(self):
-        return super().tearDown()
 
     def test_combinacao(self):
         senha = gerar_senha(self.tamanho, self.incluir_maiusculas, self.incluir_numeros, self.incluir_especiais)
@@ -23,5 +20,3 @@ class TestCombinacao(unittest.TestCase):
         especiais = "!@#"
         self.assertTrue(any(char in especiais for char in senha))
 
-if __name__ == "__main__":
-    unittest.main()

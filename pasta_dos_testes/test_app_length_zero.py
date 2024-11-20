@@ -10,15 +10,7 @@ class TestLengthZero(unittest.TestCase):
     def setUp(self):
         self.tamanho = 0
 
-    def tearDown(self):
-        return super().tearDown()
-
     def test_erro_tamanho_zero(self):
         with self.assertRaises(ValueError):
             gerar_senha(self.tamanho)
 
-    def tearDown(self):
-        return super().tearDown()
-
-if __name__ == "__main__":
-    unittest.main()

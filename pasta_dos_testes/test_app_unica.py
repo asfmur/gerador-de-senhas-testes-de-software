@@ -10,9 +10,6 @@ class TestSenhaUnica(unittest.TestCase):
     def setUp(self):
         self.tamanho = 10
 
-    def tearDown(self):
-        return super().tearDown()
-
     def test_senha_unica(self):
         senhas = [gerar_senha(self.tamanho, ) for _ in range(100)]
     
@@ -20,5 +17,3 @@ class TestSenhaUnica(unittest.TestCase):
     
         self.assertEqual(len(duplicates), 0, "Existem senhas repetidas")
 
-if __name__ == "__main__":
-    unittest.main()
