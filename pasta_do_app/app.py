@@ -3,8 +3,12 @@ import string
 
 def gerar_senha(tamanho, incluir_maiusculas=True, incluir_numeros=True, incluir_especiais=True):
   
+    if not isinstance(tamanho, int):
+        raise ValueError("Tamanho deve ser um inteiro positivo ")
+    
     if tamanho < 1 or tamanho > 30 :
         raise ValueError("O tamanho da senha deve ser maior que 0 e menor que 30.")
+    
     
     exemplo_nao_coberto = 10
     if exemplo_nao_coberto < 2:
