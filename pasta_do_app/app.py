@@ -6,6 +6,9 @@ def gerar_senha(tamanho, incluir_maiusculas=True, incluir_numeros=True, incluir_
     if tamanho < 1 or tamanho > 30 :
         raise ValueError("O tamanho da senha deve ser maior que 0 e menor que 30.")
     
+    exemplo_nao_coberto = 10
+    if exemplo_nao_coberto < 2:
+        exemplo_nao_coberto = 20
     #Strings agrupando chars de diferentes categorias
     grupo_minusculas = string.ascii_lowercase
     grupo_maiusculas = string.ascii_uppercase if incluir_maiusculas else ""
