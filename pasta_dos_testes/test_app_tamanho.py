@@ -20,7 +20,11 @@ class TestTamanho(unittest.TestCase):
         elif self._testMethodName == "test_terceiro_senha_tamanho":
             self.tamanho = 30
         elif self._testMethodName == "test_quarto_senha_tamanho":
-            self.tamanho = "gaskjyjasgjkyg==========88888888!@" 
+            self.tamanho = "gaskjyjasgjkyg==========88888888!@"
+        elif self._testMethodName == "test_quinto_senha_tamanho":
+            self.tamanho = 100 
+        elif self._testMethodName == "test_sexto_senha_tamanho":
+            self.tamanho = -100 
 
     def tearDown(self):
         return super().tearDown()
@@ -38,5 +42,13 @@ class TestTamanho(unittest.TestCase):
         self.assertEqual(len(senha), 30)
 
     def test_quarto_senha_tamanho(self):
+        with self.assertRaises(ValueError):
+            gerar_senha(self.tamanho)
+
+    def test_quinto_senha_tamanho(self):
+        with self.assertRaises(ValueError):
+            gerar_senha(self.tamanho)
+
+    def test_sexto_senha_tamanho(self):
         with self.assertRaises(ValueError):
             gerar_senha(self.tamanho)
